@@ -7,12 +7,70 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/under_win_lose_text"
+        android:layout_width="278dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:gravity="center_horizontal"
+        android:text="Can you guess a number from 1 to 100?"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/enter_number_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/win_lose_text" />
+
+    <TextView
+        android:id="@+id/win_lose_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Take a challange!"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/under_win_lose_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_num_text"
+        app:layout_constraintVertical_bias="0.656" />
+
+    <TextView
+        android:id="@+id/enter_num_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter number here:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.691" />
+
+    <EditText
+        android:id="@+id/enter_number_field"
+        android:layout_width="113dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.778"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.698" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
