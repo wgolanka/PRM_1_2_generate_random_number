@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun drawRandomNumber(view: View) {
+    fun validateAndDrawRandomNumber(view: View) {
         val inputText: TextView = findViewById(R.id.enter_number_field)
         if (inputText.text.isNullOrEmpty()) {
             showToastOnInvalidInput()

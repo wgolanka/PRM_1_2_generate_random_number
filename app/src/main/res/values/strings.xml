@@ -5,7 +5,8 @@
     <string name="take_a_challenge">Take a challenge!</string>
     <string name="draw">draw</string>
     <string name="big_congrats">Congrats!</string>
-    <string name="small_congrats">"Drew number is equal to %d"</string>
+    <string name="small_congrats">"Drew number is %d"</string>
     <string name="big_OhNo">Oh no :(</string>
     <string name="small_OhNo">"Random number is %d. Try again!"</string>
+    <string name="hint_number">25</string>
 </resources>
