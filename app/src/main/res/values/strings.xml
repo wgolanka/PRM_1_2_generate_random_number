@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PRM_1_2_generate_random_number</string>
+    <string name="can_you_guess_a_number_from_1_to_100">Can you guess a number from 1 to 100?</string>
+    <string name="enter_number_here">Enter number here:</string>
+    <string name="take_a_challange">Take a challange!</string>
+    <string name="draw">draw</string>
 </resources>
