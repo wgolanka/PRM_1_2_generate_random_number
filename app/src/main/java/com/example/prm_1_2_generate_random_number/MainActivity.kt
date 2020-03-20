@@ -9,9 +9,12 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
+    private var randomNumber: Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        randomNumber = Random.nextInt(1, 100)
     }
 
     fun validateAndDrawRandomNumber(view: View) {
@@ -27,11 +30,10 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val randomNumber: Int = Random.nextInt(1, 100)
         if (randomNumber == inputNumber) {
-            showWinText(randomNumber)
+            showWinText()
         } else {
-            showLoseText(randomNumber)
+            showLoseText(inputNumber)
         }
     }
 
@@ -43,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         ).show()
     }
 
-    private fun showWinText(randomNumber: Int) {
+    private fun showWinText() {
         val bigWinLoseText: TextView = findViewById(R.id.win_lose_text)
         val smallWinLoseText: TextView = findViewById(R.id.under_win_lose_text)
 
@@ -51,11 +53,17 @@ class MainActivity : AppCompatActivity() {
         smallWinLoseText.text = String.format(getString(R.string.small_congrats), randomNumber)
     }
 
-    private fun showLoseText(randomNumber: Int) {
+    private fun showLoseText(inputNumber: Int) {
         val bigWinLoseText: TextView = findViewById(R.id.win_lose_text)
         val smallWinLoseText: TextView = findViewById(R.id.under_win_lose_text)
-
         bigWinLoseText.text = getString(R.string.big_OhNo)
-        smallWinLoseText.text = String.format(getString(R.string.small_OhNo), randomNumber)
+
+        if (randomNumber > inputNumber) {
+            smallWinLoseText.text =
+                String.format(getString(R.string.small_OhNoItsBigger), inputNumber)
+        } else {
+            smallWinLoseText.text =
+                String.format(getString(R.string.small_OhNoItsSmaller), inputNumber)
+        }
     }
 }
