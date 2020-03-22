@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">PRM_1_2_generate_random_number</string>
+    <string name="can_you_guess_a_number_from_1_to_100">Random number from 1 to 100 was drew. CAN YOU GUESS IT?</string>
+    <string name="enter_number_here">Enter number here:</string>
+    <string name="take_a_challenge">Take a challenge!</string>
+    <string name="draw">draw</string>
+    <string name="big_congrats">Congrats!</string>
+    <string name="small_congrats">"Drew number is %d"</string>
+    <string name="big_OhNo">Oh no :(</string>
+    <string name="small_OhNoItsBigger">"Random number is bigger than %d. Try again!"</string>
+    <string name="small_OhNoItsSmaller">"Random number is smaller than %d. Try again!"</string>
+    <string name="hint_number">25</string>
 </resources>
